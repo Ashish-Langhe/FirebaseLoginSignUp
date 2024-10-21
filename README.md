@@ -1,2 +1,2 @@
 # FirebaseLoginSignUp
-A exploratory app build with Login/SignUp functionality using firebase using SwiftUI &amp; MVVM.
+A exploratory app build with Login/SignUp functionality using firebase, SwiftUI &amp; MVVM architecture.
