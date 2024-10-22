@@ -27,22 +27,10 @@ struct LoginView: View {
                 ) {
                     
                     //logo
-                    Image(
-                        "login"
-                    )
-                    .resizable()
-                    .scaledToFit()
+                    logo
                     
                     //title
-                    Text(
-                        "Let's Connect With US!"
-                    )
-                    .font(
-                        .title2
-                    )
-                    .fontWeight(
-                        .semibold
-                    )
+                    header
                     
                     Spacer()
                         .frame(
@@ -50,6 +38,7 @@ struct LoginView: View {
                         )
                     
                     //text-fields
+                    
                     InputView(
                         placeholder: "Email",
                         text: $email
@@ -61,137 +50,26 @@ struct LoginView: View {
                         text: $password
                     )
                     
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            
-                        },
-                               label: {
-                            Text(
-                                "Forgot Password?"
-                            )
-                            .foregroundStyle(
-                                .gray
-                            )
-                            .fontWeight(
-                                .medium
-                            )
-                            .font(
-                                .subheadline
-                            )
-                        })
-                    }
-                    
+
                     //login button
+                    loginButton
+                
+                    //forgot password
+                    forgotPassword
                     
-                    Button(action: {
-                        
-                    },
-                           label: {
-                        Text(
-                            "Login"
-                        )
-                    })
-                    .buttonStyle(
-                        CapsuleButtonStyle()
-                    )
-                    .padding(
-                        .all,
-                        15
-                    )
+                    Spacer()
                     
                     //bottom-view OR
-                    HStack (
-                        spacing: 16
-                    ) {
-                        line
-                        Text(
-                            "or"
-                        )
-                        .fontWeight(
-                            .medium
-                        )
-                        line
-                    }
-                    .foregroundStyle(
-                        .gray
-                    )
+                    orDivider
                     
                     //apple button
-                    Button(action: {
-                        
-                    },
-                           label: {
-                        Label(
-                            "Sign up with Apple",
-                            systemImage: "apple.logo"
-                        )
-                    })
-                    .buttonStyle(
-                        CapsuleButtonStyle(
-                            bgColor: .black
-                        )
-                    )
-                    .padding(
-                        .all,
-                        15
-                    )
+                    appleButton
                     
                     //google button
-                    Button(action: {
-                        
-                    },
-                           label: {
-                        HStack{
-                            Image(
-                                "google_icon"
-                            )
-                            .resizable()
-                            .scaledToFit()
-                            .frame(
-                                width: 15,
-                                height: 15
-                            )
-                            Text(
-                                "Sign up with Google"
-                            )
-                        }
-                    })
-                    .buttonStyle(
-                        CapsuleButtonStyle(
-                            bgColor: .white,
-                            textColor: .black,
-                            hasBorder: true
-                        )
-                    )
-                    .padding(
-                        .all,
-                        15
-                    )
+                    googleButton
                     
                     //footer
-                    NavigationLink(destination: {
-                        
-                    },
-                                   label: {
-                        HStack {
-                            Text(
-                                "Don't have an account?"
-                            )
-                            .foregroundStyle(
-                                .black
-                            )
-                            Text(
-                                "Sign Up"
-                            )
-                            .foregroundStyle(
-                                .teal
-                            )
-                            .fontWeight(
-                                .semibold
-                            )
-                        }
-                    })
+                    footer
                     
                 }
             }
@@ -206,6 +84,165 @@ struct LoginView: View {
             }
         
         
+    }
+    
+    private var logo: some View {
+        Image(
+            "login"
+        )
+        .resizable()
+        .scaledToFit()
+        
+    }
+    
+    private var header: some View {
+        Text(
+            "Let's Connect With US!"
+        )
+        .font(
+            .title2
+        )
+        .fontWeight(
+            .semibold
+        )
+    }
+    
+    private var loginButton: some View {
+        Button(action: {
+            
+        },
+               label: {
+            Text(
+                "Login"
+            )
+        })
+        .buttonStyle(
+            CapsuleButtonStyle()
+        )
+        .padding(
+            .all,
+            15
+        )
+    }
+    
+    private var forgotPassword: some View {
+        HStack {
+            Spacer()
+            Button(action: {
+                
+            },
+                   label: {
+                Text(
+                    "Forgot Password?"
+                )
+                .foregroundStyle(
+                    .gray
+                )
+                .fontWeight(
+                    .medium
+                )
+                .font(
+                    .subheadline
+                )
+            })
+        }
+    }
+    private var orDivider: some View {
+        HStack (
+            spacing: 16
+        ) {
+            line
+            Text(
+                "or"
+            )
+            .fontWeight(
+                .medium
+            )
+            line
+        }
+        .foregroundStyle(
+            .gray
+        )
+    }
+    
+    private var appleButton: some View {
+        Button(action: {
+            
+        },
+               label: {
+            Label(
+                "Sign up with Apple",
+                systemImage: "apple.logo"
+            )
+        })
+        .buttonStyle(
+            CapsuleButtonStyle(
+                bgColor: .black
+            )
+        )
+        .padding(
+            .all,
+            15
+        )
+        
+    }
+    
+    private var googleButton: some View {
+        Button(action: {
+            
+        },
+               label: {
+            HStack{
+                Image(
+                    "google_icon"
+                )
+                .resizable()
+                .scaledToFit()
+                .frame(
+                    width: 15,
+                    height: 15
+                )
+                Text(
+                    "Sign up with Google"
+                )
+            }
+        })
+        .buttonStyle(
+            CapsuleButtonStyle(
+                bgColor: .white,
+                textColor: .black,
+                hasBorder: true
+            )
+        )
+        .padding(
+            .all,
+            15
+        )
+    }
+    
+    private var footer: some View {
+        NavigationLink(destination: {
+            
+        },
+                       label: {
+            HStack {
+                Text(
+                    "Don't have an account?"
+                )
+                .foregroundStyle(
+                    .black
+                )
+                Text(
+                    "Sign Up"
+                )
+                .foregroundStyle(
+                    .teal
+                )
+                .fontWeight(
+                    .semibold
+                )
+            }
+        })
     }
 }
 
