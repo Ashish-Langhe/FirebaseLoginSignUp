@@ -11,7 +11,7 @@ import SwiftUI
 struct FirebaseAuthApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(email: "HJHJ@hgjh.cin", password: "iy8y87RESDG76")
+            LoginView()
         }
     }
 }
