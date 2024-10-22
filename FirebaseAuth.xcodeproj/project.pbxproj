@@ -16,6 +16,7 @@
 		902B54FD2CC6C19200BC83AF /* FirebaseAuthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B54FC2CC6C19200BC83AF /* FirebaseAuthUITestsLaunchTests.swift */; };
 		902B55132CC78B1500BC83AF /* LoginAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 902B55122CC78B1500BC83AF /* LoginAssets.xcassets */; };
 		902B55152CC78C0100BC83AF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B55142CC78C0100BC83AF /* LoginView.swift */; };
+		902B55182CC7B33000BC83AF /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B55172CC7B33000BC83AF /* CapsuleButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		902B54FC2CC6C19200BC83AF /* FirebaseAuthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		902B55122CC78B1500BC83AF /* LoginAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoginAssets.xcassets; sourceTree = "<group>"; };
 		902B55142CC78C0100BC83AF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		902B55172CC7B33000BC83AF /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		902B55102CC78AAC00BC83AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				902B55162CC7B31900BC83AF /* Styles */,
 				902B55142CC78C0100BC83AF /* LoginView.swift */,
 			);
 			path = Views;
@@ -205,6 +208,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		902B55162CC7B31900BC83AF /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				902B55172CC7B33000BC83AF /* CapsuleButtonStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				902B55152CC78C0100BC83AF /* LoginView.swift in Sources */,
+				902B55182CC7B33000BC83AF /* CapsuleButtonStyle.swift in Sources */,
 				902B54E12CC6C19000BC83AF /* ContentView.swift in Sources */,
 				902B54DF2CC6C19000BC83AF /* FirebaseAuthApp.swift in Sources */,
 			);

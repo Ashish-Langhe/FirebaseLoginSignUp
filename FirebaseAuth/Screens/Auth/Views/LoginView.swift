@@ -20,12 +20,11 @@ struct LoginView: View {
     }
     
     var body: some View {
-            NavigationStack {
+        NavigationStack {
             ScrollView {
                 VStack (
                     spacing: 16
                 ) {
-                    
                     //logo
                     logo
                     
@@ -48,10 +47,9 @@ struct LoginView: View {
                         text: $password
                     )
                     
-
                     //login button
                     loginButton
-                
+                    
                     //forgot password
                     forgotPassword
                     
@@ -59,7 +57,6 @@ struct LoginView: View {
                     
                     //bottom-view
                     bottomView
-                    
                 }
             }
             .ignoresSafeArea()
@@ -70,9 +67,7 @@ struct LoginView: View {
                 .vertical,
                 8
             )
-            }
-        
-        
+        }
     }
     
     private var logo: some View {
@@ -81,7 +76,6 @@ struct LoginView: View {
         )
         .resizable()
         .scaledToFit()
-        
     }
     
     private var header: some View {
@@ -98,7 +92,7 @@ struct LoginView: View {
     
     private var loginButton: some View {
         Button(action: {
-            
+            //ToDo
         },
                label: {
             Text(
@@ -118,7 +112,7 @@ struct LoginView: View {
         HStack {
             Spacer()
             Button(action: {
-                
+                //ToDo
             },
                    label: {
                 Text(
@@ -156,7 +150,7 @@ struct LoginView: View {
     
     private var appleButton: some View {
         Button(action: {
-            
+            //ToDo
         },
                label: {
             Label(
@@ -178,7 +172,7 @@ struct LoginView: View {
     
     private var googleButton: some View {
         Button(action: {
-            
+            //ToDo
         },
                label: {
             HStack{
@@ -211,7 +205,7 @@ struct LoginView: View {
     
     private var footer: some View {
         NavigationLink(destination: {
-            
+            //ToDo
         },
                        label: {
             HStack {
@@ -246,8 +240,6 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
-    
-    // InputView(placeholder: "Email or Phone Number", text: .constant(""))
 }
 
 struct InputView: View {
@@ -274,43 +266,6 @@ struct InputView: View {
             }
             Divider()
         }
-    }
-}
-
-struct CapsuleButtonStyle: ButtonStyle {
-    
-    var bgColor: Color = .teal
-    var textColor: Color = .white
-    var hasBorder: Bool = false
-    
-    func makeBody(
-        configuration: Configuration
-    ) -> some View {
-        configuration.label
-            .foregroundStyle(
-                textColor
-            )
-            .padding()
-            .frame(
-                maxWidth: .infinity
-            )
-            .background(
-                bgColor
-            )
-            .background(
-                in: .capsule
-            )
-            .scaleEffect(
-                configuration.isPressed ? 0.95 : 1
-            )
-            .overlay {
-                hasBorder ?
-                Capsule()
-                    .stroke(
-                        .gray,
-                        lineWidth: 1
-                    ): nil
-            }
     }
 }
 
