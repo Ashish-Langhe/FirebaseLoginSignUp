@@ -14,6 +14,8 @@
 		902B54F12CC6C19200BC83AF /* FirebaseAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B54F02CC6C19200BC83AF /* FirebaseAuthTests.swift */; };
 		902B54FB2CC6C19200BC83AF /* FirebaseAuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B54FA2CC6C19200BC83AF /* FirebaseAuthUITests.swift */; };
 		902B54FD2CC6C19200BC83AF /* FirebaseAuthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B54FC2CC6C19200BC83AF /* FirebaseAuthUITestsLaunchTests.swift */; };
+		902B55132CC78B1500BC83AF /* LoginAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 902B55122CC78B1500BC83AF /* LoginAssets.xcassets */; };
+		902B55152CC78C0100BC83AF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B55142CC78C0100BC83AF /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		902B54F62CC6C19200BC83AF /* FirebaseAuthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseAuthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		902B54FA2CC6C19200BC83AF /* FirebaseAuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthUITests.swift; sourceTree = "<group>"; };
 		902B54FC2CC6C19200BC83AF /* FirebaseAuthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		902B55122CC78B1500BC83AF /* LoginAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoginAssets.xcassets; sourceTree = "<group>"; };
+		902B55142CC78C0100BC83AF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +99,9 @@
 		902B54DD2CC6C19000BC83AF /* FirebaseAuth */ = {
 			isa = PBXGroup;
 			children = (
-				902B54DE2CC6C19000BC83AF /* FirebaseAuthApp.swift */,
-				902B54E02CC6C19000BC83AF /* ContentView.swift */,
-				902B54E22CC6C19200BC83AF /* Assets.xcassets */,
+				902B550C2CC78A7B00BC83AF /* Screens */,
+				902B550A2CC6C32700BC83AF /* Main */,
+				902B550B2CC78A5000BC83AF /* Resources */,
 				902B54E42CC6C19200BC83AF /* FirebaseAuth.entitlements */,
 				902B54E52CC6C19200BC83AF /* Preview Content */,
 			);
@@ -127,6 +131,80 @@
 				902B54FC2CC6C19200BC83AF /* FirebaseAuthUITestsLaunchTests.swift */,
 			);
 			path = FirebaseAuthUITests;
+			sourceTree = "<group>";
+		};
+		902B55092CC6C31B00BC83AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				902B54DE2CC6C19000BC83AF /* FirebaseAuthApp.swift */,
+				902B54E02CC6C19000BC83AF /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		902B550A2CC6C32700BC83AF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				902B55092CC6C31B00BC83AF /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		902B550B2CC78A5000BC83AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				902B54E22CC6C19200BC83AF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		902B550C2CC78A7B00BC83AF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				902B550D2CC78A9300BC83AF /* Auth */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		902B550D2CC78A9300BC83AF /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				902B55112CC78AAF00BC83AF /* Models */,
+				902B55102CC78AAC00BC83AF /* Views */,
+				902B550F2CC78AAA00BC83AF /* Resource */,
+				902B550E2CC78AA600BC83AF /* ViewModels */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		902B550E2CC78AA600BC83AF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		902B550F2CC78AAA00BC83AF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				902B55122CC78B1500BC83AF /* LoginAssets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		902B55102CC78AAC00BC83AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				902B55142CC78C0100BC83AF /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		902B55112CC78AAF00BC83AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				902B54E72CC6C19200BC83AF /* Preview Assets.xcassets in Resources */,
+				902B55132CC78B1500BC83AF /* LoginAssets.xcassets in Resources */,
 				902B54E32CC6C19200BC83AF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902B55152CC78C0100BC83AF /* LoginView.swift in Sources */,
 				902B54E12CC6C19000BC83AF /* ContentView.swift in Sources */,
 				902B54DF2CC6C19000BC83AF /* FirebaseAuthApp.swift in Sources */,
 			);
