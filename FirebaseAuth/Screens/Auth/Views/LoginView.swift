@@ -33,9 +33,7 @@ struct LoginView: View {
                     header
                     
                     Spacer()
-                        .frame(
-                            height: 12
-                        )
+                        .frame(height: 12)
                     
                     //text-fields
                     
@@ -59,17 +57,8 @@ struct LoginView: View {
                     
                     Spacer()
                     
-                    //bottom-view OR
-                    orDivider
-                    
-                    //apple button
-                    appleButton
-                    
-                    //google button
-                    googleButton
-                    
-                    //footer
-                    footer
+                    //bottom-view
+                    bottomView
                     
                 }
             }
@@ -244,6 +233,15 @@ struct LoginView: View {
             }
         })
     }
+    
+    private var bottomView: some View {
+        VStack (spacing: 10) {
+            orDivider
+            appleButton
+            googleButton
+            footer
+        }
+    }
 }
 
 #Preview {
@@ -315,3 +313,5 @@ struct CapsuleButtonStyle: ButtonStyle {
             }
     }
 }
+
+
