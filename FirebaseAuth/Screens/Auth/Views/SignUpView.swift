@@ -42,18 +42,30 @@ struct SignUpView: View {
                     text: $password
                 )
                
-                InputView(
-                    placeholder: "Confirm Password",
-                    isSecuredField: true,
-                    text: $confirmPassword
-                )
-                Spacer()
+                
+                
+                ZStack (alignment: .trailing) {
+                    InputView(
+                        placeholder: "Confirm Password",
+                        isSecuredField: true,
+                        text: $confirmPassword
+                    )
+                    Spacer()
+                    if !password.isEmpty && !confirmPassword.isEmpty {
+                        Image(systemName: "\(isValidPassword ? "checkmark" : "xmark").circle.fill")
+                            .imageScale(.large)
+                            .fontWeight(.bold)
+                            .foregroundColor(isValidPassword ? Color(.systemGreen) : Color(.systemRed))
+                    }
+                }
             }
-            .padding()
+            .padding(.all, 16)
         }
         .navigationTitle("Set up your account")
         
-        
+        var isValidPassword: Bool {
+            confirmPassword == password
+        }
         
         Button(action: {
             //ToDo
